@@ -1,0 +1,141 @@
+<!--http://mathforum.org/library/drmath/view/52312.html-->
+<!--http://ecx.images-amazon.com/images/I/71eoP0%2BxkxS._SL1200_.jpg-->
+<!--https://en.wikipedia.org/wiki/Piano_key_frequencies-->
+<!--https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode-->
+<!--.warning| Work in progress!-->
+<div
+    id="kaoss"
+    data-component="Kaossillator"
+>
+    <div
+        class="metal"
+        data-component="Metal"
+    >
+        <button
+            class="btn knob"
+            data-component="Knob"
+        >
+            <!--test-->
+            <div class="knob-dent"></div>
+            <!--test-->
+            <div class="knob-dent"></div>
+            <!--test-->
+            <div class="knob-dent"></div>
+            <!--test-->
+            <div class="knob-dent"></div>
+            <!--test-->
+            <div class="knob-dent"></div>
+            <!--test-->
+            <div class="knob-dent"></div>
+            <!--test-->
+            <div class="knob-dent"></div>
+            <!--test-->
+            <div class="knob-dent"></div>
+            <!--test-->
+            <div class="knob-dent"></div>
+            <!--test-->
+            <div class="knob-dent"></div>
+            <!--test-->
+            <div class="knob-dent"></div>
+            <!--test-->
+            <div class="knob-dent"></div>
+        </button>
+        <div
+            class="rnd-container"
+            id="wave"
+            data-component="WaveButtons"
+        ><button
+                class="btn rnd btn-sine"
+                data-component="SineWaveButton"
+            >
+                <svg
+                    id="sine"
+                    viewBox="-1 -1 10 10"
+                >
+                    <path d="M 0,4 C 0,4 0,1 2,1 4,1 4,7 6,7 8,7 8,4 8,4"></path>
+                </svg></button>
+
+            <button
+                class="btn rnd btn-square"
+                data-component="SquareWaveButton"
+            >
+                <svg
+                    id="square"
+                    viewBox="-1 -1 10 10"
+                >
+                    <path d="M 0,1 0,7 4,7 4,1 8,1 8,7"></path>
+                </svg>
+            </button>
+
+            <button
+                class="btn rnd btn-triangle"
+                data-component="TriangleWaveButton"
+            >
+                <svg
+                    id="triangle"
+                    viewBox="-1 -1 10 10"
+                >
+                    <path d="M 0,4 2,8 6,0 8,4"></path>
+                </svg>
+            </button>
+        </div>
+        <div id="lcd">
+            <!--p.display-->
+        </div>
+        <form
+            id="options"
+            name="settings"
+            class="form-container"
+            data-component="SettingsForm"
+            class="form-container"
+        ></form>
+        <div class="form-group"><label for="type">Type</label><select id="type">
+                <option value="sine">sine</option>
+                <option value="square">square</option>
+                <option value="triangle">triangle</option>
+            </select></div>
+        <div class="form-group"><label for="tonic">Tonic</label><select id="tonic">
+                <option value="C">C</option>
+                <option value="C#">C#</option>
+                <option value="D">D</option>
+                <option value="D#">D#</option>
+                <option value="E">E</option>
+                <option value="F">F</option>
+                <option value="F#">F#</option>
+                <option value="G">G</option>
+                <option value="G#">G#</option>
+                <option value="A">A</option>
+                <option value="A#">A#</option>
+                <option value="B">B</option>
+            </select></div>
+        <div class="form-group"><label for="octave">Octave</label><select id="octave">
+                <option value="-1">-1</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select></div>
+        <div class="form-group"><label for="mode">Mode</label><select id="mode">
+                <option value="none">none</option>
+                <option value="semitone">semitone</option>
+                <option value="ionian">ionian</option>
+                <option value="dorian">dorian</option>
+                <option value="phrygian">phrygian</option>
+                <option value="lydian">lydian</option>
+                <option value="mixolydian">mixolydian</option>
+                <option value="aeolian">aeolian</option>
+                <option value="locrian">locrian</option>
+            </select>
+            <!--input(type="range",min="-1",max="1")-->
+        </div>
+        </form>
+
+        <canvas
+            id="pad"
+            data-component="TouchPad"
+        ></canvas>
+    </div>
+</div>

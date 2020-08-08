@@ -24,4 +24,6 @@ node_modules
 .idea
 
 #compiled/uglified resource dir
-www/**/*
+build/
+dist/
+web_modules/
