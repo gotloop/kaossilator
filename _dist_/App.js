@@ -1,0 +1,1 @@
+import a from"../web_modules/react.js";import b from"./app/components/Kaossillator.js";typeof AudioContext==="undefined"&&alert("audio api not supported");export default function e(){return a.createElement(b,null)}

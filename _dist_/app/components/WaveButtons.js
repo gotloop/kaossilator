@@ -1,0 +1,1 @@
+import a from"../../../web_modules/react.js";import b from"./SineWaveButton.js";import c from"./SquareWaveButton.js";import d from"./TriangleWaveButton.js";class e extends a.Component{render(){return a.createElement("div",{className:"rnd-container",id:"wave"},a.createElement(b,null),a.createElement(c,null),a.createElement(d,null))}}export default e;

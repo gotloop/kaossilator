@@ -1,0 +1,208 @@
+:root {
+  --primaryColor: #505;
+  --grey: #666;
+  --btnSize: 1rem;
+  --rndSize: 4rem;
+  --btnFontSize: 2rem;
+  --btnColor: var(--primaryColor);
+  --knobSize: 8rem;
+  --kaossHeight: 38rem;
+  --kaossWidth: 42rem;
+  --topBarHeight: 18rem;
+  --margin: 1.2rem;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: Arial, Verdana, sans-serif;
+  font-size: 70%;
+  padding: 0;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#kaoss {
+  width: var(--kaossWidth);
+  height: var(--kaossHeight);
+  border-radius: var(--margin);
+  background: var(--primaryColor);
+  flex: 0 0 auto;
+  box-shadow:
+    0 0 30px rgba(0, 0, 0, 0.25),
+    inset 0 5px 15px rgba(255, 255, 255, 0.75);
+}
+
+#kaoss .metal {
+  margin: 0 calc(var(--margin) * 2);
+  background: lightgrey;
+  height: 100%;
+  padding: 0;
+  position: relative;
+}
+
+#pad {
+  position: absolute;
+  bottom: var(--margin);
+  left: var(--margin);
+  right: var(--margin);
+  top: var(--topBarHeight);
+  width: calc(var(--kaossWidth) - 6 * var(--margin));
+  height: calc(var(--kaossHeight) - var(--margin) - var(--topBarHeight));
+  background-color: var(--grey);
+  border-radius: 1rem;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.display {
+  color: green;
+  background-color: black;
+  border-radius: 0.25rem;
+  display: inline-block;
+  width: 5rem;
+  height: 2rem;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.form-group {
+  position: relative;
+  display: flex;
+}
+
+.form-group input,
+.form-group select {
+  border: 2px var(--grey) solid;
+}
+
+.form-group label {
+  text-transform: uppercase;
+  display: block;
+  margin: 0.25rem 0;
+  font-size: 1rem;
+  width: 5rem;
+}
+
+.form-group select {
+  display: block;
+  padding: 0.15rem;
+}
+
+.form-container {
+  position: absolute;
+  left: var(--margin);
+}
+
+/* round boutons with svg for wave form */
+.rnd-container {
+  position: absolute;
+  top: var(--margin);
+  right: var(--margin);
+  width: calc(var(--rndSize) * 2.25);
+  height: calc(2 * var(--rndSize));
+}
+
+.rnd-container .rnd {
+  position: absolute;
+  width: var(--rndSize);
+  height: var(--rndSize);
+  border-radius: calc(var(--rndSize) / 2);
+}
+
+.rnd-container .rnd svg {
+  fill: none;
+  stroke: white;
+}
+
+.rnd-container .rnd:nth-child(1) {
+  left: 0;
+}
+
+.rnd-container .rnd:nth-child(2) {
+  right: 0;
+}
+
+.rnd-container .rnd:nth-child(3) {
+  bottom: 0;
+  left: calc(var(--rndSize) * 1.125);
+  margin-left: calc(var(--btnSize) * 2);
+}
+
+.btn {
+  border-radius: calc(var(--btnSize) / 2);
+  width: var(--btnSize);
+  height: var(--btnSize);
+  font-size: var(--btnFontSize);
+  border: 0;
+  background-color: var(--primaryColor);
+  color: white;
+  text-align: center;
+  box-shadow:
+    inset 5px 5px 15px rgba(255, 255, 255, 0.5),
+    inset -5px -5px 5px rgba(0, 0, 0, 0.5),
+    -5px -5px 15px rgba(255, 255, 255, 0.5),
+    5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.btn:hover {
+  background-color: darken(var(--btnColor), 5);
+  cursor: pointer;
+}
+
+.btn-group {
+  box-shadow: 0 0 1rem var(--grey);
+  border-radius: calc(var(--btnSize) / 2);
+  height: var(--btnSize);
+  line-height: var(--btnSize);
+  display: flex;
+}
+
+.btn-group .btn {
+  font-size: 12px;
+  border-radius: 0;
+  padding: 0.5em 0.5em;
+  flex: 1 auto;
+}
+
+.btn-group .btn:first-of-type {
+  border-radius: calc(var(--btnSize) / 2) 0 0 calc(var(--btnSize) / 2);
+}
+
+.btn-group .btn:last-of-type {
+  border-radius: 0 calc(var(--btnSize) / 2) calc(var(--btnSize) / 2) 0;
+}
+
+.knob {
+  position: absolute;
+  top: 5rem;
+  left: 50%;
+  margin-left: calc(var(--knobSize) / 2);
+  width: var(--knobSize);
+  height: var(--knobSize);
+  border-radius: calc(var(--knobSize) / 2);
+  display: none; /* for now */
+}
+
+.knob-dent {
+  position: absolute;
+}
+
+.warning {
+  font-size: 10rem;
+  transform: rotate(25deg);
+  transform-origin: right center;
+  position: absolute;
+  z-index: 9001;
+  top: 70%;
+  left: 25%;
+  color: rgba(128, 128, 128, 0.25);
+}

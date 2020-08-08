@@ -1,0 +1,1 @@
+import a from"../../../web_modules/react.js";class b extends a.Component{render(){return a.createElement("button",{className:"btn rnd btn-triangle"},a.createElement("svg",{id:"triangle",viewBox:"-1 -1 10 10"},a.createElement("path",{d:"M 0,4 2,8 6,0 8,4"})))}}export default b;

@@ -1,0 +1,1 @@
+import a from"../../../web_modules/react.js";import b from"./Metal.js";import"./Kaossillator.css.proxy.js";class c extends a.Component{render(){return a.createElement("div",{id:"kaoss"},a.createElement(b,null))}}export default c;
