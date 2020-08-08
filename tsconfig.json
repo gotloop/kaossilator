@@ -1,0 +1,23 @@
+{
+  "extends": "@snowpack/app-scripts-react/tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "react",
+    "allowJs": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
+    "baseUrl": ".",
+    "module": "esnext",
+    "lib":["DOM", "ESNext"],
+    "paths": {
+      // Define either ONE of these...
+      // 2. Explicit support: match only your mounted directories (Recommended!)
+      "src/*": ["src/*"],
+      "app/*": ["src/app/*"],
+      "public/*": ["public/*"],
+      "*": ["web_modules/.types/*"]
+    }
+  },
+  "include": ["src", "types"],
+  "exclude": ["node_modules", "old"]
+}
