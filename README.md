@@ -1,10 +1,11 @@
-# kaossilator
+# 🎵 kaossilator 🎛️ 🎙️
 
 A sass/react/tone.js recreation of the Korg kaossillator
+See it in action at [https://gotloop.github.io/kaossillator/]
+🚧 Work in progress !
 
-Work in progress !
+💡 Initially started as this pen on codepen : https://codepen.io/jibhaine/pen/yNGNQz
 
-Initially started as this pen on codepen : https://codepen.io/jibhaine/pen/yNGNQz
 ## Goals
 
 * experiment with [React](https://facebook.github.io/react/) and [Tone.js](http://tonejs.org/docs/)

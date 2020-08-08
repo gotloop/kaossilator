@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/gotloop/kaossilator/issues"
   },
-  "homepage": "https://github.com/gotloop/kaossilator#readme",
+  "homepage": "https://gotloop.github.io/kaossilator/",
   "dependencies": {
     "@tonaljs/tonal": "^4.1.0",
     "react": "^16.13.1",
