@@ -10,7 +10,7 @@
     "lint": "eslint src/**/*.ts",
     "stylelint": "stylelint src/**/*.css",
     "css": "sass src/app/style.scss public/style.css",
-    "deploy": "gh-pages -d build"
+    "deploy": "NODE_DEBUG=gh-pages gh-pages -d build"
   },
   "repository": {
     "type": "git",
