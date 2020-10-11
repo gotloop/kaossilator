@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - run: git config user.name "Benjamin Legrand" && git config user.email "jibhaine@free.fr"
       - uses: actions/setup-node@v1
       - run: npm install
       - run: npm run build
