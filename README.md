@@ -1,7 +1,7 @@
 # 🎵 kaossilator 🎛️ 🎙️
 
-A sass/react/tone.js recreation of the Korg kaossillator
-See it in action at [https://gotloop.github.io/kaossillator/]
+A sass/react/tone.js recreation of the Korg kaossilator
+See it in action at [https://gotloop.github.io/kaossilator/]
 🚧 Work in progress !
 
 💡 Initially started as this pen on codepen : https://codepen.io/jibhaine/pen/yNGNQz
