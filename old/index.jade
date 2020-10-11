@@ -8,19 +8,44 @@ html
                 button.btn.knob
                 - var n = 0
                 while n < 12
+                    //test
                     - n++
-                    span.knob-dent
-                .btn-container
-                    button.btn.btn-next
-                        | A
-                    button.btn.btn-prev
-                        | B
-                    button.btn.btn-loop
-                        | C
+                    .knob-dent
+                .rnd-container#wave
+                    - box="-1 -1 10 10"
+                    button.btn.rnd.btn-sine
+                        svg#sine(viewBox=box)
+                            path(d='M 0,4 C 0,4 0,1 2,1 4,1 4,7 6,7 8,7 8,4 8,4')
+                    button.btn.rnd.btn-square
+                        svg#square(viewBox=box)
+                            path(d='M 0,1 0,7 4,7 4,1 8,1 8,7')
+                    button.btn.rnd.btn-triangle
+                        svg#triangle(viewBox=box)
+                            path(d='M 0,4 2,8 6,0 8,4')
                 #lcd
-                    p.display
-                #pad
-                    canvas
-            img#reference(src='http://ecx.images-amazon.com/images/I/71eoP0%2BxkxS._SL1200_.jpg')
-
-        script(src='bundle.js')
+                    .form-container
+                        form#options(name="settings")
+                            .form-group
+                                label(for="type")
+                                    | Type
+                                select(id="type")
+                                    option(value="sine") sine
+                                    option(value="square") square
+                                    option(value="triangle") triangle
+                            .form-group
+                                label(for="tonic") Tonic
+                                select(id="tonic")
+                                    each note in ['C','C#','D','D#','E','F','F#','G','G#','A','A#','B']
+                                        option(value=note)=note
+                            .form-group
+                                label(for="octave") Octave
+                                select(id="octave")
+                                    each octave in [-1,0,1,2,3,4,5,6]
+                                        option(value=octave)=octave
+                            .form-group
+                                label(for="mode") Mode
+                                select(id="mode")
+                                    each mode in ['none','semitone','ionian','dorian','phrygian','lydian','mixolydian','aeolian','locrian']
+                                        option(value=mode)=mode
+                    canvas#pad
+        script(src='index.ts')
