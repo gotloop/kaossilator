@@ -1,1 +1,14 @@
-import a from"../../../web_modules/react.js";import b from"./Metal.js";import"./Kaossillator.css.proxy.js";class c extends a.Component{render(){return a.createElement("div",{id:"kaoss"},a.createElement(b,null))}}export default c;
+import React from "../../../web_modules/react.js";
+import Metal from "./Metal.js";
+import './Kaossillator.css.proxy.js';
+
+class Kaossillator extends React.Component {
+  render() {
+    return /*#__PURE__*/React.createElement("div", {
+      id: "kaoss"
+    }, /*#__PURE__*/React.createElement(Metal, null));
+  }
+
+}
+
+export default Kaossillator;

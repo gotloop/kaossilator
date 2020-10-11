@@ -1,1 +1,107 @@
-import a from"../../../web_modules/react.js";import b from"./Knob.js";import c from"./WaveButtons.js";import d from"./SettingsForm.js";import e from"./TouchPad.js";import"./Metal.css.proxy.js";class f extends a.Component{render(){return a.createElement("div",{className:"metal"},a.createElement(b,null),a.createElement(c,null),a.createElement("div",{id:"lcd"}),a.createElement(d,null),a.createElement("div",{className:"form-group"},a.createElement("label",{htmlFor:"type"},"Type"),a.createElement("select",{id:"type"},a.createElement("option",{value:"sine"},"sine"),a.createElement("option",{value:"square"},"square"),a.createElement("option",{value:"triangle"},"triangle"))),a.createElement("div",{className:"form-group"},a.createElement("label",{htmlFor:"tonic"},"Tonic"),a.createElement("select",{id:"tonic"},a.createElement("option",{value:"C"},"C"),a.createElement("option",{value:"C#"},"C#"),a.createElement("option",{value:"D"},"D"),a.createElement("option",{value:"D#"},"D#"),a.createElement("option",{value:"E"},"E"),a.createElement("option",{value:"F"},"F"),a.createElement("option",{value:"F#"},"F#"),a.createElement("option",{value:"G"},"G"),a.createElement("option",{value:"G#"},"G#"),a.createElement("option",{value:"A"},"A"),a.createElement("option",{value:"A#"},"A#"),a.createElement("option",{value:"B"},"B"))),a.createElement("div",{className:"form-group"},a.createElement("label",{htmlFor:"octave"},"Octave"),a.createElement("select",{id:"octave"},a.createElement("option",{value:-1},"-1"),a.createElement("option",{value:0},"0"),a.createElement("option",{value:1},"1"),a.createElement("option",{value:2},"2"),a.createElement("option",{value:3},"3"),a.createElement("option",{value:4},"4"),a.createElement("option",{value:5},"5"),a.createElement("option",{value:6},"6"))),a.createElement("div",{className:"form-group"},a.createElement("label",{htmlFor:"mode"},"Mode"),a.createElement("select",{id:"mode"},a.createElement("option",{value:"none"},"none"),a.createElement("option",{value:"semitone"},"semitone"),a.createElement("option",{value:"ionian"},"ionian"),a.createElement("option",{value:"dorian"},"dorian"),a.createElement("option",{value:"phrygian"},"phrygian"),a.createElement("option",{value:"lydian"},"lydian"),a.createElement("option",{value:"mixolydian"},"mixolydian"),a.createElement("option",{value:"aeolian"},"aeolian"),a.createElement("option",{value:"locrian"},"locrian"))),a.createElement(e,null))}}export default f;
+import React from "../../../web_modules/react.js";
+import Knob from "./Knob.js";
+import WaveButtons from "./WaveButtons.js";
+import SettingsForm from "./SettingsForm.js";
+import TouchPad from "./TouchPad.js";
+import './Metal.css.proxy.js';
+
+class Metal extends React.Component {
+  render() {
+    return /*#__PURE__*/React.createElement("div", {
+      className: "metal"
+    }, /*#__PURE__*/React.createElement(Knob, null), /*#__PURE__*/React.createElement(WaveButtons, null), /*#__PURE__*/React.createElement("div", {
+      id: "lcd"
+    }), /*#__PURE__*/React.createElement(SettingsForm, null), /*#__PURE__*/React.createElement("div", {
+      className: "form-group"
+    }, /*#__PURE__*/React.createElement("label", {
+      htmlFor: "type"
+    }, "Type"), /*#__PURE__*/React.createElement("select", {
+      id: "type"
+    }, /*#__PURE__*/React.createElement("option", {
+      value: "sine"
+    }, "sine"), /*#__PURE__*/React.createElement("option", {
+      value: "square"
+    }, "square"), /*#__PURE__*/React.createElement("option", {
+      value: "triangle"
+    }, "triangle"))), /*#__PURE__*/React.createElement("div", {
+      className: "form-group"
+    }, /*#__PURE__*/React.createElement("label", {
+      htmlFor: "tonic"
+    }, "Tonic"), /*#__PURE__*/React.createElement("select", {
+      id: "tonic"
+    }, /*#__PURE__*/React.createElement("option", {
+      value: "C"
+    }, "C"), /*#__PURE__*/React.createElement("option", {
+      value: "C#"
+    }, "C#"), /*#__PURE__*/React.createElement("option", {
+      value: "D"
+    }, "D"), /*#__PURE__*/React.createElement("option", {
+      value: "D#"
+    }, "D#"), /*#__PURE__*/React.createElement("option", {
+      value: "E"
+    }, "E"), /*#__PURE__*/React.createElement("option", {
+      value: "F"
+    }, "F"), /*#__PURE__*/React.createElement("option", {
+      value: "F#"
+    }, "F#"), /*#__PURE__*/React.createElement("option", {
+      value: "G"
+    }, "G"), /*#__PURE__*/React.createElement("option", {
+      value: "G#"
+    }, "G#"), /*#__PURE__*/React.createElement("option", {
+      value: "A"
+    }, "A"), /*#__PURE__*/React.createElement("option", {
+      value: "A#"
+    }, "A#"), /*#__PURE__*/React.createElement("option", {
+      value: "B"
+    }, "B"))), /*#__PURE__*/React.createElement("div", {
+      className: "form-group"
+    }, /*#__PURE__*/React.createElement("label", {
+      htmlFor: "octave"
+    }, "Octave"), /*#__PURE__*/React.createElement("select", {
+      id: "octave"
+    }, /*#__PURE__*/React.createElement("option", {
+      value: -1
+    }, "-1"), /*#__PURE__*/React.createElement("option", {
+      value: 0
+    }, "0"), /*#__PURE__*/React.createElement("option", {
+      value: 1
+    }, "1"), /*#__PURE__*/React.createElement("option", {
+      value: 2
+    }, "2"), /*#__PURE__*/React.createElement("option", {
+      value: 3
+    }, "3"), /*#__PURE__*/React.createElement("option", {
+      value: 4
+    }, "4"), /*#__PURE__*/React.createElement("option", {
+      value: 5
+    }, "5"), /*#__PURE__*/React.createElement("option", {
+      value: 6
+    }, "6"))), /*#__PURE__*/React.createElement("div", {
+      className: "form-group"
+    }, /*#__PURE__*/React.createElement("label", {
+      htmlFor: "mode"
+    }, "Mode"), /*#__PURE__*/React.createElement("select", {
+      id: "mode"
+    }, /*#__PURE__*/React.createElement("option", {
+      value: "none"
+    }, "none"), /*#__PURE__*/React.createElement("option", {
+      value: "semitone"
+    }, "semitone"), /*#__PURE__*/React.createElement("option", {
+      value: "ionian"
+    }, "ionian"), /*#__PURE__*/React.createElement("option", {
+      value: "dorian"
+    }, "dorian"), /*#__PURE__*/React.createElement("option", {
+      value: "phrygian"
+    }, "phrygian"), /*#__PURE__*/React.createElement("option", {
+      value: "lydian"
+    }, "lydian"), /*#__PURE__*/React.createElement("option", {
+      value: "mixolydian"
+    }, "mixolydian"), /*#__PURE__*/React.createElement("option", {
+      value: "aeolian"
+    }, "aeolian"), /*#__PURE__*/React.createElement("option", {
+      value: "locrian"
+    }, "locrian"))), /*#__PURE__*/React.createElement(TouchPad, null));
+  }
+
+}
+
+export default Metal;

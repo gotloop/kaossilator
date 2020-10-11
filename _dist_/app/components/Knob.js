@@ -1,1 +1,36 @@
-import a from"../../../web_modules/react.js";class b extends a.Component{render(){return a.createElement("button",{className:"btn knob"},a.createElement("div",{className:"knob-dent"}),a.createElement("div",{className:"knob-dent"}),a.createElement("div",{className:"knob-dent"}),a.createElement("div",{className:"knob-dent"}),a.createElement("div",{className:"knob-dent"}),a.createElement("div",{className:"knob-dent"}),a.createElement("div",{className:"knob-dent"}),a.createElement("div",{className:"knob-dent"}),a.createElement("div",{className:"knob-dent"}),a.createElement("div",{className:"knob-dent"}),a.createElement("div",{className:"knob-dent"}),a.createElement("div",{className:"knob-dent"}))}}export default b;
+import React from "../../../web_modules/react.js";
+
+class Knob extends React.Component {
+  render() {
+    return /*#__PURE__*/React.createElement("button", {
+      className: "btn knob"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "knob-dent"
+    }), /*#__PURE__*/React.createElement("div", {
+      className: "knob-dent"
+    }), /*#__PURE__*/React.createElement("div", {
+      className: "knob-dent"
+    }), /*#__PURE__*/React.createElement("div", {
+      className: "knob-dent"
+    }), /*#__PURE__*/React.createElement("div", {
+      className: "knob-dent"
+    }), /*#__PURE__*/React.createElement("div", {
+      className: "knob-dent"
+    }), /*#__PURE__*/React.createElement("div", {
+      className: "knob-dent"
+    }), /*#__PURE__*/React.createElement("div", {
+      className: "knob-dent"
+    }), /*#__PURE__*/React.createElement("div", {
+      className: "knob-dent"
+    }), /*#__PURE__*/React.createElement("div", {
+      className: "knob-dent"
+    }), /*#__PURE__*/React.createElement("div", {
+      className: "knob-dent"
+    }), /*#__PURE__*/React.createElement("div", {
+      className: "knob-dent"
+    }));
+  }
+
+}
+
+export default Knob;

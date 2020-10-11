@@ -1,1 +1,13 @@
-import a from"../../../web_modules/react.js";import"./Selector.css.proxy.js";import b from"./SelectButton.js";const c=d=>a.createElement("div",{className:"form-group"},a.createElement("select",{className:"sr-only"},d.options.map(i=>b)));export default c;
+import React from "../../../web_modules/react.js";
+import "./Selector.css.proxy.js";
+import SelectButton from "./SelectButton.js";
+
+const Selector = props => {
+  return /*#__PURE__*/React.createElement("div", {
+    className: "form-group"
+  }, /*#__PURE__*/React.createElement("select", {
+    className: "sr-only"
+  }, props.options.map(opts => SelectButton)));
+};
+
+export default Selector;

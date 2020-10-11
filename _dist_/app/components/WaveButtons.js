@@ -1,1 +1,16 @@
-import a from"../../../web_modules/react.js";import b from"./SineWaveButton.js";import c from"./SquareWaveButton.js";import d from"./TriangleWaveButton.js";class e extends a.Component{render(){return a.createElement("div",{className:"rnd-container",id:"wave"},a.createElement(b,null),a.createElement(c,null),a.createElement(d,null))}}export default e;
+import React from "../../../web_modules/react.js";
+import SineWaveButton from "./SineWaveButton.js";
+import SquareWaveButton from "./SquareWaveButton.js";
+import TriangleWaveButton from "./TriangleWaveButton.js";
+
+class WaveButtons extends React.Component {
+  render() {
+    return /*#__PURE__*/React.createElement("div", {
+      className: "rnd-container",
+      id: "wave"
+    }, /*#__PURE__*/React.createElement(SineWaveButton, null), /*#__PURE__*/React.createElement(SquareWaveButton, null), /*#__PURE__*/React.createElement(TriangleWaveButton, null));
+  }
+
+}
+
+export default WaveButtons;

@@ -1,1 +1,14 @@
-function c(){return c=Object.assign||function(b){for(var a=1;a<arguments.length;a++){var d=arguments[a];for(var e in d)Object.prototype.hasOwnProperty.call(d,e)&&(b[e]=d[e])}return b},c.apply(this,arguments)}import f,{useRef as g}from"../../../web_modules/react.js";import"./TouchPad.css.proxy.js";const h=b=>{const a=g(null);return f.createElement("canvas",c({ref:a,id:"pad"},b))};export default h;
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+import React, { useRef } from "../../../web_modules/react.js";
+import "./TouchPad.css.proxy.js";
+
+const TouchPad = props => {
+  const canvasRef = useRef(null);
+  return /*#__PURE__*/React.createElement("canvas", _extends({
+    ref: canvasRef,
+    id: "pad"
+  }, props));
+};
+
+export default TouchPad;
