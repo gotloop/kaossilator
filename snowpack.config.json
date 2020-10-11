@@ -21,6 +21,12 @@
         "cmd": "tsc --noEmit",
         "watch": "$1 --watch"
       }
+    ],
+    [
+      "@snowpack/plugin-webpack",
+      {
+        "mode": "production"
+      }
     ]
   ]
 }
