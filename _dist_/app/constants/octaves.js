@@ -64,3 +64,4 @@ export const oscillatorTypes = [{
   name: "triangle",
   iconPath: "M 0,4 2,8 6,0 8,4"
 }];
+//# sourceMappingURL=octaves.js.map

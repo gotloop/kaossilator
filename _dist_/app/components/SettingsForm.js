@@ -13,3 +13,4 @@ class SettingsForm extends React.Component {
 }
 
 export default SettingsForm;
+//# sourceMappingURL=SettingsForm.js.map

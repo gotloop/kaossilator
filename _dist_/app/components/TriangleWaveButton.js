@@ -15,3 +15,4 @@ class TriangleWaveButton extends React.Component {
 }
 
 export default TriangleWaveButton;
+//# sourceMappingURL=TriangleWaveButton.js.map

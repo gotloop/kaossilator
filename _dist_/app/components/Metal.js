@@ -105,3 +105,4 @@ class Metal extends React.Component {
 }
 
 export default Metal;
+//# sourceMappingURL=Metal.js.map

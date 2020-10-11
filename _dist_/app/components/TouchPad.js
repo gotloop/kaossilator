@@ -12,3 +12,4 @@ const TouchPad = props => {
 };
 
 export default TouchPad;
+//# sourceMappingURL=TouchPad.js.map

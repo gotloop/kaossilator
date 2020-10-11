@@ -15,3 +15,4 @@ class SineWaveButton extends React.Component {
 }
 
 export default SineWaveButton;
+//# sourceMappingURL=SineWaveButton.js.map

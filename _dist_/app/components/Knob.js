@@ -34,3 +34,4 @@ class Knob extends React.Component {
 }
 
 export default Knob;
+//# sourceMappingURL=Knob.js.map

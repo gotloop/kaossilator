@@ -12,3 +12,4 @@ class Kaossillator extends React.Component {
 }
 
 export default Kaossillator;
+//# sourceMappingURL=Kaossillator.js.map

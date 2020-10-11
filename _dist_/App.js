@@ -4,3 +4,4 @@ if (typeof AudioContext === "undefined") alert('audio api not supported');
 export default function App() {
   return /*#__PURE__*/React.createElement(Kaossillator, null);
 }
+//# sourceMappingURL=App.js.map

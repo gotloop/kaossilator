@@ -5,3 +5,4 @@ export function initialState() {
     scales: {}
   };
 }
+//# sourceMappingURL=state.js.map
