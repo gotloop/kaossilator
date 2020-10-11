@@ -72,6 +72,10 @@ class KaossModel {
   volume: number;
   frequency: number;
   scale: number[];
+  tonic: number;
+  isPlaying: any;
+  currentPitch: number;
+  currentOffset: number;
   constructor() {
     //web audio api nodes
     this.context = new AudioContext();
@@ -151,6 +155,12 @@ class KaossModel {
 }
 //bind mouse events to the model and draw stuff on canvas
 class TouchPadView {
+  model: any;
+  element: any;
+  context: any;
+  circles: any[];
+  frameCount: number;
+  currentTouch: { x: any; y: any; };
   constructor(model, element) {
     this.model = model;
     this.element = element;
@@ -185,10 +195,10 @@ class TouchPadView {
     this.model.setVolume(pressed.volume);
     this.model.setFrequency(pressed.pitch);
   }
-  onMouseDown(event) {
+  onMouseDown(event?: MouseEvent) {
     this.model.start();
   }
-  drawCircle(event) {
+  drawCircle() {
     if (this.currentTouch) {
       this.context.beginPath();
       this.context.fillStyle = "white";
@@ -272,7 +282,8 @@ class TouchPadView {
 }
 //overrides the display of select with prettier buttons. experimental, should be in  jade when done.
 class SelectComponent {
-  constructor(select) {
+  element: HTMLElement;
+  constructor(select: HTMLSelectElement) {
     this.element = select;
     //add btn group to label
     this.element.parentElement.appendChild(this.render());
@@ -354,4 +365,4 @@ window.addEventListener("DOMContentLoaded", (event) => {
   });
   touchpad.animate();
 });
-window.model = model;
+window['model'] = model;
