@@ -22,6 +22,11 @@ html {
   padding: 0;
 }
 
+.sr-only {
+  display: none;
+  visibility: hidden;
+}
+
 #root {
   width: 100%;
   height: 100%;
