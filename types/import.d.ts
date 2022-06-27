@@ -1,8 +1,5 @@
-// ESM-HMR Interface: `import.meta.hot`
-
 interface ImportMeta {
-  // TODO: Import the exact .d.ts files from "esm-hmr"
-  // https://github.com/pikapkg/esm-hmr
+  // This should be provided by vite, but i could not make it work
+  // https://vitejs.dev/guide/api-hmr.htmlhttps://github.com/pikapkg/esm-hmr
   hot: any;
-  env: Record<string, any>;
 }

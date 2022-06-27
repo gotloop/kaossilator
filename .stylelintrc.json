@@ -1,8 +1,7 @@
 {
-    "extends": "stylelint-config-standard",
-    "rules": {
-      "color-no-invalid-hex": true,
-      "indentation": 2
-    }
+  "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
+  "rules": {
+    "color-no-invalid-hex": true,
+    "indentation": 2
   }
-  
+}

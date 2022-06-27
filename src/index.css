@@ -42,9 +42,9 @@ html {
   border-radius: var(--margin);
   background: var(--primaryColor);
   flex: 0 0 auto;
-  box-shadow:
-    0 0 30px rgba(0, 0, 0, 0.25),
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.25),
     inset 0 5px 15px rgba(255, 255, 255, 0.75);
+  position: relative;
 }
 
 #kaoss .metal {
@@ -138,8 +138,7 @@ html {
 
 .rnd-container .rnd:nth-child(3) {
   bottom: 0;
-  left: calc(var(--rndSize) * 1.125);
-  margin-left: calc(var(--btnSize) * 2);
+  left: calc(var(--rndSize) / 2);
 }
 
 .btn {
@@ -151,11 +150,9 @@ html {
   background-color: var(--primaryColor);
   color: white;
   text-align: center;
-  box-shadow:
-    inset 5px 5px 15px rgba(255, 255, 255, 0.5),
+  box-shadow: inset 5px 5px 15px rgba(255, 255, 255, 0.5),
     inset -5px -5px 5px rgba(0, 0, 0, 0.5),
-    -5px -5px 15px rgba(255, 255, 255, 0.5),
-    5px 5px 15px rgba(0, 0, 0, 0.5);
+    -5px -5px 15px rgba(255, 255, 255, 0.5), 5px 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 .btn:hover {
