@@ -12,7 +12,7 @@ const Selector: React.FunctionComponent<SelectorProps> = (
   return (
     <div className="form-group">
       <select className="sr-only">
-        {props.options.map((opts) => SelectButton)}
+        {/*props.options.map((opts) => <SelectButton>{opts}</SelectButton>)*/}
       </select>
     </div>
   );
