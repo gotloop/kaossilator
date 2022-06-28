@@ -16,7 +16,7 @@ jobs:
       - name: Install and build
         run: |
           npm install 
-          npm run build
+          npm run build -- --base=/kaossilator/
       - name: Deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
