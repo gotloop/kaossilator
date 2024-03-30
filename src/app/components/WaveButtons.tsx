@@ -1,18 +1,17 @@
 import React from "react";
-import SineWaveButton from "./SineWaveButton";
-import SquareWaveButton from "./SquareWaveButton";
-import TriangleWaveButton from "./TriangleWaveButton";
 
-class WaveButtons extends React.Component {
-  render() {
-    return (
-      <div className="rnd-container" id="wave">
-        <SineWaveButton></SineWaveButton>
-        <SquareWaveButton></SquareWaveButton>
-        <TriangleWaveButton></TriangleWaveButton>
-      </div>
-    );
-  }
-}
+import { waveForms } from "../../core/constants";
 
-export default WaveButtons;
+export const WaveButtons: React.FC = () => {
+  return (
+    <div className="rnd-container" id="wave">
+      {waveForms.map((waveForm) => (
+        <button className="btn rnd btn-square" key={waveForm.name}>
+          <svg id="square" viewBox="-1 -1 10 10">
+            <path d={waveForm.iconPath} />
+          </svg>
+        </button>
+      ))}
+    </div>
+  );
+};

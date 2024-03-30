@@ -1,12 +1,12 @@
 import React from "react";
 
 import "./Selector.css";
-import SelectButton from "./SelectButton";
 
 interface SelectorProps {
   options: string[];
 }
-const Selector: React.FunctionComponent<SelectorProps> = (
+
+export const Selector: React.FC<SelectorProps> = (
   props: SelectorProps,
 ) => {
   return (
@@ -17,4 +17,3 @@ const Selector: React.FunctionComponent<SelectorProps> = (
     </div>
   );
 };
-export default Selector;

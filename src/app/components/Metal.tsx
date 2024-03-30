@@ -1,19 +1,16 @@
 import React from "react";
-import Knob from "./Knob";
-import WaveButtons from "./WaveButtons";
-import SettingsForm from "./SettingsForm";
-import TouchPad from "./TouchPad";
+import { WaveButtons } from "./WaveButtons";
+import { SettingsForm } from "./SettingsForm";
+import { TouchPad } from "./TouchPad";
 
-import './Metal.css';
+import "./Metal.css";
 
-class Metal extends React.Component {
-  render() {
-    return (
-      <div className="metal">
-        <Knob></Knob>
-        <WaveButtons></WaveButtons>
-        <div id="lcd">{}</div>
-        <SettingsForm />
+export const Metal: React.FC = () => {
+  return (
+    <div className="metal">
+      <WaveButtons></WaveButtons>
+      <div id="lcd">{}</div>
+      <SettingsForm>
         <div className="form-group">
           <label htmlFor="type">Type</label>
           <select id="type">
@@ -65,12 +62,10 @@ class Metal extends React.Component {
             <option value="aeolian">aeolian</option>
             <option value="locrian">locrian</option>
           </select>
-          {}
         </div>
-        <TouchPad />
-      </div>
-    );
-  }
-}
+      </SettingsForm>
+      <TouchPad />
+    </div>
+  );
+};
 
-export default Metal;
