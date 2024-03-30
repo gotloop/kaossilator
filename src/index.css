@@ -1,15 +1,16 @@
 :root {
-  --primaryColor: #505;
-  --grey: #666;
-  --btnSize: 1rem;
-  --rndSize: 4rem;
-  --btnFontSize: 2rem;
-  --btnColor: var(--primaryColor);
-  --knobSize: 8rem;
-  --kaossHeight: 38rem;
-  --kaossWidth: 42rem;
-  --topBarHeight: 18rem;
-  --margin: 1.2rem;
+  --k-color-primary: #505;
+  --k-color-grey: #666;
+  --k-size-button: 1rem;
+  --k-size-radius: 4rem;
+  --k-font-size-button: 2rem;
+  --k-color-button: var(--k-color-primary);
+  --k-color-button-hover: #404;
+  --k-size-knob: 8rem;
+  --k-kaoss-height: 38rem;
+  --k-kaoss-width: 42rem;
+  --k-topbar-height: 18rem;
+  --k-margin: 1.2rem;
 }
 
 body,
@@ -37,18 +38,18 @@ html {
 }
 
 #kaoss {
-  width: var(--kaossWidth);
-  height: var(--kaossHeight);
-  border-radius: var(--margin);
-  background: var(--primaryColor);
+  width: var(--k-kaoss-width);
+  height: var(--k-kaoss-height);
+  border-radius: var(--k-margin);
+  background: var(--k-color-primary);
   flex: 0 0 auto;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.25),
-    inset 0 5px 15px rgba(255, 255, 255, 0.75);
+  box-shadow: 0 0 30px rgb(0 0 0 / 25%),
+    inset 0 5px 15px rgb(255 255 255 / 75%);
   position: relative;
 }
 
 #kaoss .metal {
-  margin: 0 calc(var(--margin) * 2);
+  margin: 0 calc(var(--k-margin) * 2);
   background: lightgrey;
   height: 100%;
   padding: 0;
@@ -57,15 +58,12 @@ html {
 
 #pad {
   position: absolute;
-  bottom: var(--margin);
-  left: var(--margin);
-  right: var(--margin);
-  top: var(--topBarHeight);
-  width: calc(var(--kaossWidth) - 6 * var(--margin));
-  height: calc(var(--kaossHeight) - var(--margin) - var(--topBarHeight));
-  background-color: var(--grey);
+  inset: var(--k-topbar-height) var(--k-margin) var(--k-margin) var(--k-margin);
+  width: calc(var(--k-kaoss-width) - 6 * var(--k-margin));
+  height: calc(var(--k-kaoss-height) - var(--k-margin) - var(--k-topbar-height));
+  background-color: var(--k-color-grey);
   border-radius: 1rem;
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 0 10px rgb(0 0 0 / 40%);
 }
 
 .display {
@@ -86,7 +84,7 @@ html {
 
 .form-group input,
 .form-group select {
-  border: 2px var(--grey) solid;
+  border: 2px var(--k-color-grey) solid;
 }
 
 .form-group label {
@@ -104,23 +102,23 @@ html {
 
 .form-container {
   position: absolute;
-  left: var(--margin);
+  left: var(--k-margin);
 }
 
 /* round boutons with svg for wave form */
 .rnd-container {
   position: absolute;
-  top: var(--margin);
-  right: var(--margin);
-  width: calc(var(--rndSize) * 2.25);
-  height: calc(2 * var(--rndSize));
+  top: var(--k-margin);
+  right: var(--k-margin);
+  width: calc(var(--k-size-radius) * 2.25);
+  height: calc(2 * var(--k-size-radius));
 }
 
 .rnd-container .rnd {
   position: absolute;
-  width: var(--rndSize);
-  height: var(--rndSize);
-  border-radius: calc(var(--rndSize) / 2);
+  width: var(--k-size-radius);
+  height: var(--k-size-radius);
+  border-radius: calc(var(--k-size-radius) / 2);
 }
 
 .rnd-container .rnd svg {
@@ -138,59 +136,59 @@ html {
 
 .rnd-container .rnd:nth-child(3) {
   bottom: 0;
-  left: calc(var(--rndSize) / 2);
+  left: calc(var(--k-size-radius) / 2);
 }
 
 .btn {
-  border-radius: calc(var(--btnSize) / 2);
-  width: var(--btnSize);
-  height: var(--btnSize);
-  font-size: var(--btnFontSize);
+  border-radius: calc(var(--k-size-button) / 2);
+  width: var(--k-size-button);
+  height: var(--k-size-button);
+  font-size: var(--k-font-size-button);
   border: 0;
-  background-color: var(--primaryColor);
+  background-color: var(--k-color-primary);
   color: white;
   text-align: center;
-  box-shadow: inset 5px 5px 15px rgba(255, 255, 255, 0.5),
-    inset -5px -5px 5px rgba(0, 0, 0, 0.5),
-    -5px -5px 15px rgba(255, 255, 255, 0.5), 5px 5px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 5px 5px 15px rgb(255 255 255 / 50%),
+    inset -5px -5px 5px rgb(0 0 0 / 50%),
+    -5px -5px 15px rgb(255 255 255 / 50%), 5px 5px 15px rgb(0 0 0 / 50%);
 }
 
 .btn:hover {
-  background-color: darken(var(--btnColor), 5);
+  background-color: var(--k-color-button-hover);
   cursor: pointer;
 }
 
 .btn-group {
-  box-shadow: 0 0 1rem var(--grey);
-  border-radius: calc(var(--btnSize) / 2);
-  height: var(--btnSize);
-  line-height: var(--btnSize);
+  box-shadow: 0 0 1rem var(--k-color-grey);
+  border-radius: calc(var(--k-size-button) / 2);
+  height: var(--k-size-button);
+  line-height: var(--k-size-button);
   display: flex;
 }
 
 .btn-group .btn {
   font-size: 12px;
   border-radius: 0;
-  padding: 0.5em 0.5em;
+  padding: 0.5em;
   flex: 1 auto;
 }
 
 .btn-group .btn:first-of-type {
-  border-radius: calc(var(--btnSize) / 2) 0 0 calc(var(--btnSize) / 2);
+  border-radius: calc(var(--k-size-button) / 2) 0 0 calc(var(--k-size-button) / 2);
 }
 
 .btn-group .btn:last-of-type {
-  border-radius: 0 calc(var(--btnSize) / 2) calc(var(--btnSize) / 2) 0;
+  border-radius: 0 calc(var(--k-size-button) / 2) calc(var(--k-size-button) / 2) 0;
 }
 
 .knob {
   position: absolute;
   top: 5rem;
   left: 50%;
-  margin-left: calc(var(--knobSize) / 2);
-  width: var(--knobSize);
-  height: var(--knobSize);
-  border-radius: calc(var(--knobSize) / 2);
+  margin-left: calc(var(--k-size-knob) / 2);
+  width: var(--k-size-knob);
+  height: var(--k-size-knob);
+  border-radius: calc(var(--k-size-knob) / 2);
   display: none; /* for now */
 }
 
@@ -206,5 +204,5 @@ html {
   z-index: 9001;
   top: 70%;
   left: 25%;
-  color: rgba(128, 128, 128, 0.25);
+  color: rgb(128 128 128 / 25%);
 }
