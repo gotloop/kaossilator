@@ -17,7 +17,7 @@ export const octaves = {
   "10": 16744, //C10 : Approximately the tone that a typical CRT television emits while running.
 };
 //Arbitrary starting notes
-export const notes = {
+export const notesValues = {
   C: 0,
   "C#": 1,
   D: 2,
@@ -31,9 +31,11 @@ export const notes = {
   "A#": 10,
   B: 11,
 };
+export const notes = Object.keys(notesValues);
 //scales, number of semitones from the tonic.
 // https://en.wikipedia.org/wiki/Diatonic_scale
-export const scales = {
+export const scalesIntervals = {
+  none: [],
   ionian: [0, 2, 4, 5, 7, 9, 11],
   dorian: [0, 2, 3, 5, 7, 9, 10],
   phrygian: [0, 1, 3, 5, 7, 8, 10],
@@ -42,8 +44,22 @@ export const scales = {
   aeolian: [0, 2, 3, 5, 7, 8, 10],
   locrian: [0, 1, 3, 5, 6, 8, 10],
 };
+
+export const scales = Object.keys(scalesIntervals);
+
+export type WaveFormType = "sine" | "square" | "triangle";
+
+export type ScaleType = keyof typeof scalesIntervals;
+
+export type NoteType = keyof typeof notes;
+
+export interface WaveFormData {
+  name: WaveFormType;
+  iconPath: string;
+}
+
 //svg icon path for the wave form.
-export const oscillatorTypes = [
+export const waveForms: WaveFormData[] = [
   {
     name: "sine",
     iconPath: "M 0,4 C 0,4 0,1 2,1 4,1 4,7 6,7 8,7 8,4 8,4",
