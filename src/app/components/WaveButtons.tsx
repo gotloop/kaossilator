@@ -1,6 +1,7 @@
 import React from "react";
 
 import { waveForms } from "../../core/constants";
+import "./WaveButtons.css";
 
 export const WaveButtons: React.FC = () => {
   return (

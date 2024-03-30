@@ -2,17 +2,35 @@ import React from "react";
 
 import "./Selector.css";
 
-interface SelectorProps {
-  options: string[];
+interface SelectorItemProps {
+  label: string;
+  value: string;
 }
 
-export const Selector: React.FC<SelectorProps> = (
-  props: SelectorProps,
-) => {
+interface SelectorProps {
+  name?: string;
+  id: string;
+  options: SelectorItemProps[];
+  value: string;
+  change: (e: React.ChangeEvent<HTMLSelectElement>) => void;
+}
+
+export const Selector: React.FC<SelectorProps> = ({
+  options,
+  change,
+  value,
+  id,
+  name,
+}) => {
   return (
     <div className="form-group">
-      <select className="sr-only">
-        {/*props.options.map((opts) => <SelectButton>{opts}</SelectButton>)*/}
+      <label htmlFor={id}>{name}</label>
+      <select id={id} onChange={change} value={value}>
+        {options.map((option) => (
+          <option key={String(option.value)} value={option.value}>
+            {option.label}
+          </option>
+        ))}
       </select>
     </div>
   );

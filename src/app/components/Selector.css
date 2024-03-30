@@ -1,3 +1,26 @@
-.selector {
-  display: inherit;
+.form-group {
+  position: relative;
+  display: flex;
+}
+
+.form-group input,
+.form-group select {
+  border: 2px var(--k-color-grey) solid;
+}
+
+.form-group label {
+  text-transform: uppercase;
+  display: block;
+  margin: 0.25rem 0;
+  font-size: 1rem;
+  width: 5rem;
+}
+
+.form-group select {
+  display: block;
+  padding: 0.15rem;
+  padding: 0 1rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  border-color: var(--k-color-primary);
 }

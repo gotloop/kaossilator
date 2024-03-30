@@ -1,0 +1,58 @@
+
+/* round boutons with svg for wave form */
+.rnd-container {
+  position: absolute;
+  top: var(--k-margin);
+  right: var(--k-margin);
+  width: calc(var(--k-size-radius) * 2.25);
+  height: calc(2 * var(--k-size-radius));
+}
+
+.rnd-container .rnd {
+  position: absolute;
+  width: var(--k-size-radius);
+  height: var(--k-size-radius);
+  border-radius: calc(var(--k-size-radius) / 2);
+}
+
+.rnd-container .rnd svg {
+  fill: none;
+  stroke: white;
+  stroke-width: .4;
+  pointer-events: none;
+}
+
+.rnd-container .rnd:nth-child(1) {
+  left: 0;
+}
+
+.rnd-container .rnd:nth-child(2) {
+  right: 0;
+}
+
+.rnd-container .rnd:nth-child(3) {
+  bottom: 0;
+  left: calc(var(--k-size-radius) / 2);
+}
+
+.btn {
+  border-radius: calc(var(--k-size-button) / 2);
+  width: var(--k-size-button);
+  height: var(--k-size-button);
+  font-size: var(--k-font-size-button);
+  border: 0;
+  background-color: var(--k-color-primary);
+  color: white;
+  text-align: center;
+  box-shadow:
+    inset 5px 5px 15px rgb(255 255 255 / 50%),
+    inset -5px -5px 5px rgb(0 0 0 / 50%),
+    -5px -5px 15px rgb(255 255 255 / 50%),
+    5px 5px 15px rgb(0 0 0 / 50%);
+}
+
+.btn:hover {
+  background-color: var(--k-color-button-hover);
+  cursor: pointer;
+}
+ 

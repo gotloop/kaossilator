@@ -1,4 +1,19 @@
+#kaoss {
+  width: var(--k-kaoss-width);
+  height: var(--k-kaoss-height);
+  border-radius: var(--k-margin);
+  background: var(--k-color-primary);
+  flex: 0 0 auto;
+  box-shadow:
+    0 0 30px rgb(0 0 0 / 25%),
+    inset 0 5px 15px rgb(255 255 255 / 75%);
+  position: relative;
+}
 
-.kaossilator {
-  display: inherit;
+#kaoss .metal {
+  margin: 0 calc(var(--k-margin) * 2);
+  background: lightgrey;
+  height: 100%;
+  padding: 0;
+  position: relative;
 }

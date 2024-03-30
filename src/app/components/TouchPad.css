@@ -1,4 +1,12 @@
 
 .touchpad {
-  display: inherit;
+  position: absolute;
+  inset: var(--k-topbar-height) var(--k-margin) var(--k-margin) var(--k-margin);
+  width: calc(var(--k-kaoss-width) - 6 * var(--k-margin));
+  height: calc(
+    var(--k-kaoss-height) - var(--k-margin) - var(--k-topbar-height)
+  );
+  background-color: var(--k-color-grey);
+  border-radius: 1rem;
+  box-shadow: inset 0 0 10px rgb(0 0 0 / 40%);
 }
