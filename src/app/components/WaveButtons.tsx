@@ -14,6 +14,7 @@ export const WaveButtons: React.FC = () => {
           type="button"
           className="btn rnd btn-square"
           key={waveForm.name}
+          title={waveForm.name}
           onClick={() => setWaveForm(waveForm.name)}
         >
           <svg id="square" viewBox="-2 -2 12 10">

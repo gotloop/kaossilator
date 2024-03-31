@@ -28,3 +28,4 @@ build/
 dist/
 web_modules/
 .cache
+.stylelintcache
