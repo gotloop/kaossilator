@@ -3,7 +3,7 @@ import { useAtom } from "jotai";
 
 import { waveForms } from "../../core/constants";
 import { waveFormAtom } from "../../core/state";
-import "./WaveButtons.css";
+import "./wave-buttons.component.css";
 
 export const WaveButtons: React.FC = () => {
   const [, setWaveForm] = useAtom(waveFormAtom);
