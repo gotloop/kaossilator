@@ -1,0 +1,11 @@
+.fields {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--k-margin) / 2);
+}
+
+.settings {
+  display: flex;
+  flex-direction: row;
+  padding: var(--k-margin);
+}

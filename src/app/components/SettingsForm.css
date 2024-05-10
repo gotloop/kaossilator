@@ -1,6 +1,0 @@
-.settings {
-  display: flex;
-  flex-direction: column;
-  gap: var(--k-margin);
-  padding: var(--k-margin);
-}

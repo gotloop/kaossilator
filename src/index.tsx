@@ -2,15 +2,16 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 
 import "./index.css";
-import { Kaossillator } from "./app/components/Kaossillator";
+import { Kaossillator } from "./components/kaossillator/kaossillator.component";
+import { AudioGraph } from "./components/audio-graph/audio-graph.component";
 
 const container = document.getElementById("root") as HTMLElement;
 const root = createRoot(container);
 root.render(
   <React.StrictMode>
-    <div>
+    <AudioGraph>
       <Kaossillator />
-    </div>
+    </AudioGraph>
   </React.StrictMode>,
 );
 

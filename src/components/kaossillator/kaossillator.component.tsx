@@ -1,10 +1,9 @@
 import React from "react";
 import { useAtomsDevtools } from "jotai-devtools";
 
-import "./Kaossillator.css";
-import { WaveButtons } from "./WaveButtons";
-import { SettingsForm } from "./SettingsForm";
-import { TouchPad } from "./TouchPad";
+import "./kaossillator.component.css";
+import { SettingsForm } from "../settings-form/settings-form.component";
+import { TouchPad } from "../touchpad/touchpad.component";
 
 export const Kaossillator: React.FC = () => {
   useAtomsDevtools("Kaossillator");
@@ -12,7 +11,6 @@ export const Kaossillator: React.FC = () => {
     <div id="kaoss">
       <h1 className="sr-only">Kaossilator</h1>
       <div className="metal">
-        <WaveButtons />
         <div id="lcd">{}</div>
         <SettingsForm />
         <TouchPad />

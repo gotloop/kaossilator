@@ -35,7 +35,8 @@ export const notes = Object.keys(notesValues);
 //scales, number of semitones from the tonic.
 // https://en.wikipedia.org/wiki/Diatonic_scale
 export const scalesIntervals = {
-  none: [],
+  none: Array.from({ length: 100 }, (_, i) => i),
+  chromatic: Array.from({ length: 12 }, (_, i) => i),
   ionian: [0, 2, 4, 5, 7, 9, 11],
   dorian: [0, 2, 3, 5, 7, 9, 10],
   phrygian: [0, 1, 3, 5, 7, 8, 10],
