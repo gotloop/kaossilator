@@ -13,7 +13,10 @@
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true
+    "noEmit": true,
+    "paths": {
+      "@gotloop/kaossillator/*": ["src/*"]
+    }
   },
   "include": ["src", "types"],
   "exclude": ["**/*.spec.tsx"],

@@ -14,9 +14,6 @@ dependencies:
   jotai:
     specifier: ^2.7.2
     version: 2.7.2(@types/react@18.2.73)(react@18.2.0)
-  jotai-effect:
-    specifier: ^0.6.0
-    version: 0.6.0(jotai@2.7.2)
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -82,6 +79,9 @@ devDependencies:
   jotai-devtools:
     specifier: ^0.8.0
     version: 0.8.0(@emotion/react@11.11.4)(@types/react@18.2.73)(react-dom@18.2.0)(react@18.2.0)(redux@5.0.1)
+  jotai-effect:
+    specifier: ^0.6.0
+    version: 0.6.0(jotai@2.7.2)
   jsdom:
     specifier: ^24.0.0
     version: 24.0.0
@@ -3864,7 +3864,7 @@ packages:
       jotai: '>=2.5.0'
     dependencies:
       jotai: 2.7.2(@types/react@18.2.73)(react@18.2.0)
-    dev: false
+    dev: true
 
   /jotai@2.7.2(@types/react@18.2.73)(react@18.2.0):
     resolution: {integrity: sha512-6Ft5kpNu8p93Ssf1Faoza3hYQZRIYp7rioK8MwTTFnbQKwUyZElwquPwl1h6U0uo9hC0jr+ghO3gcSjc6P35/Q==}
@@ -3880,7 +3880,6 @@ packages:
     dependencies:
       '@types/react': 18.2.73
       react: 18.2.0
-    dev: false
 
   /js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
@@ -3983,6 +3982,7 @@ packages:
       chalk: 3.0.0
       diff-match-patch: 1.0.5
     dev: true
+    bundledDependencies: []
 
   /jsonfile@6.1.0:
     resolution: {integrity: sha512-5dgndWOriYSm5cnYaJNhalLNDKOqFwyDB/rr1E9ZsGciGvKPs8R2xYGCacuf3z6K1YKDz182fd+fY3cn3pMqXQ==}
