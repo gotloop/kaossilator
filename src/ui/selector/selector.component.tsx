@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./Selector.css";
+import "./selector.component.css";
 
 interface SelectorItemProps {
   label: string;
