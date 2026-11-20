@@ -35,6 +35,12 @@ const waveFormEffect = atomEffect((get, set) => {
   oscillator.type = waveForm;
 });
 
+if (import.meta.env.DEV) {
+  volumeEffect.debugLabel = "volumeEffect";
+  frequencyEffect.debugLabel = "frequencyEffect";
+  waveFormEffect.debugLabel = "waveFormEffect";
+}
+
 // audio graph component
 export const AudioGraph: React.FC<React.PropsWithChildren> = ({ children }) => {
   useAtom(volumeEffect);

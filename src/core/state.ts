@@ -66,3 +66,20 @@ export const frequencyAtom = atom((get) => {
   console.log("frequency", frequency)
   return frequency;
 });
+
+// Debug labels for jotai-devtools (replaces the Babel debug-label plugin dropped in Jotai 3).
+if (import.meta.env.DEV) {
+  bpmAtom.debugLabel = "bpm";
+  waveFormAtom.debugLabel = "waveForm";
+  tonicAtom.debugLabel = "tonic";
+  isPlayingAtom.debugLabel = "isPlaying";
+  touchpadSizeAtom.debugLabel = "touchpadSize";
+  touchPositionAtom.debugLabel = "touchPosition";
+  volumeAtom.debugLabel = "volume";
+  pitchAtom.debugLabel = "pitch";
+  octaveAtom.debugLabel = "octave";
+  scaleAtom.debugLabel = "scale";
+  scaleValuesAtom.debugLabel = "scaleValues";
+  offsetAtom.debugLabel = "offset";
+  frequencyAtom.debugLabel = "frequency";
+}
