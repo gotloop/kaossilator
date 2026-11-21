@@ -1,7 +1,7 @@
-import React, { MouseEventHandler, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
+import { useSetAtom, useStore } from "jotai";
 
 import "./touchpad.component.css";
-import { useAtom } from "jotai";
 import {
   touchPositionAtom,
   isPlayingAtom,
@@ -9,70 +9,82 @@ import {
 } from "../../core/state";
 import { drawCircle, drawCircles, drawCross, growCircles } from "./draw.utils";
 
-export const TouchPad: React.FC = (props) => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const requestRef = useRef<number | null>(null);
-  const [isPlaying, setIsPlaying] = useAtom(isPlayingAtom);
-  const { width, height } = canvasRef.current?.getBoundingClientRect() || {
-    width: 0,
-    height: 0,
-  };
-  canvasRef.current?.setAttribute("width", width.toString());
-  canvasRef.current?.setAttribute("height", height.toString());
-  const [, setTouchpadSize] = useAtom(touchpadSizeAtom);
+const clamp = (value: number, max: number) => Math.min(Math.max(value, 0), max);
 
-  setTouchpadSize({ width, height });
-  const startPlaying = () => {
+export const TouchPad: React.FC = () => {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const store = useStore();
+  const setIsPlaying = useSetAtom(isPlayingAtom);
+  const setTouchPosition = useSetAtom(touchPositionAtom);
+  const setTouchpadSize = useSetAtom(touchpadSizeAtom);
+
+  // Keep the canvas drawing buffer and the size atom in sync with the CSS size.
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const observer = new ResizeObserver(([entry]) => {
+      const { width, height } = entry.contentRect;
+      canvas.width = width;
+      canvas.height = height;
+      setTouchpadSize({ width, height });
+    });
+    observer.observe(canvas);
+    return () => observer.disconnect();
+  }, [setTouchpadSize]);
+
+  // Animation loop. Reads atoms straight from the store so it never re-renders React.
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const context = canvas?.getContext("2d");
+    if (!canvas || !context) return;
+    let frameCount = 0;
+    let requestId = 0;
+    const render = () => {
+      const position = store.get(touchPositionAtom);
+      const isPlaying = store.get(isPlayingAtom);
+      context.clearRect(0, 0, canvas.width, canvas.height);
+      drawCircles(context);
+      if (isPlaying) {
+        drawCross(context, position, canvas);
+        drawCircle(context, position);
+      }
+      growCircles(position, canvas, frameCount, isPlaying);
+      frameCount++;
+      requestId = requestAnimationFrame(render);
+    };
+    requestId = requestAnimationFrame(render);
+    return () => cancelAnimationFrame(requestId);
+  }, [store]);
+
+  const updatePosition = (e: React.PointerEvent<HTMLCanvasElement>) => {
+    const canvas = e.currentTarget;
+    const { left, top } = canvas.getBoundingClientRect();
+    setTouchPosition({
+      x: clamp(e.clientX - left, canvas.width),
+      y: clamp(e.clientY - top, canvas.height),
+    });
+  };
+
+  const startPlaying = (e: React.PointerEvent<HTMLCanvasElement>) => {
+    e.currentTarget.setPointerCapture(e.pointerId);
+    updatePosition(e);
     setIsPlaying(true);
   };
 
-  const stopPlaying = () => {
-    setIsPlaying(false);
+  const movePointer = (e: React.PointerEvent<HTMLCanvasElement>) => {
+    if (store.get(isPlayingAtom)) updatePosition(e);
   };
 
-  const [touchPosition, setTouchPosition] = useAtom(touchPositionAtom);
+  const stopPlaying = () => setIsPlaying(false);
 
-  const updatePosition = (e: MouseEvent & { target: HTMLCanvasElement }) => {
-    console.log("updatePosition", e);
-    if (!isPlaying) return;
-    const { left, top } = e.target.getBoundingClientRect();
-    const x = e.offsetX - left;
-    const y = e.clientX - top;
-    setTouchPosition({ x, y });
-  };
-
-  const frameCount = useRef(0);
-  const render = () => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const context = canvas.getContext("2d");
-    if (!context) return;
-    //console.log("rendering", frameCount.current);
-    context.clearRect(0, 0, canvas.width, canvas.height);
-    drawCircle(context, { x: touchPosition.x, y: touchPosition.y });
-    drawCircles(context);
-    drawCross(context, touchPosition, canvas);
-    const { width, height } = canvas.getBoundingClientRect();
-    growCircles(touchPosition, { width, height }, frameCount.current);
-    frameCount.current = Math.floor(frameCount.current) + 1;
-    requestRef.current = requestAnimationFrame(render);
-  };/*
-  useEffect(() => {
-    requestRef.current = requestAnimationFrame(render);
-    return () => {
-      cancelAnimationFrame(requestRef.current!);
-    };
-  });*/
   return (
     <canvas
       ref={canvasRef}
       className="touchpad"
-      {...props}
-      onMouseDown={startPlaying}
-      onMouseUp={stopPlaying}
-      onMouseMove={
-        updatePosition as unknown as MouseEventHandler<HTMLCanvasElement>
-      }
+      onPointerDown={startPlaying}
+      onPointerMove={movePointer}
+      onPointerUp={stopPlaying}
+      onPointerCancel={stopPlaying}
     />
   );
 };

@@ -50,9 +50,10 @@ export function growCircles(
   position: Position,
   size: Size,
   frameCount: number,
+  isPlaying: boolean,
 ) {
   //if we are playing sound add a circle every x frames.
-  if (frameCount % 5 === 0) {
+  if (isPlaying && frameCount % 5 === 0) {
     circles.push({
       x: position.x,
       y: position.y,
@@ -61,12 +62,14 @@ export function growCircles(
       a: 1,
     });
   }
-  circles.forEach((circle) => {
+  // iterate backwards so splicing doesn't skip the next circle.
+  for (let i = circles.length - 1; i >= 0; i--) {
+    const circle = circles[i];
     circle.r += 0.5;
     circle.a -= 0.005;
     //remove circle if it is too big or transparent.
     if (circle.r > size.height || circle.a <= 0) {
-      circles.splice(circles.indexOf(circle), 1);
+      circles.splice(i, 1);
     }
-  });
+  }
 }
