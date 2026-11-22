@@ -8,17 +8,17 @@ See it in action at [https://gotloop.github.io/kaossilator/]
 
 ## Goals
 
-* experiment with [React](https://facebook.github.io/react/) and [Tone.js](http://tonejs.org/docs/)
+- experiment with [React](https://facebook.github.io/react/) and [Tone.js](http://tonejs.org/docs/)
 
 ## Features
 
-* Generate sound by touching an area.
-  * Vertical axis sets the volume.
-  * Horizontal axis sets the pitch.
+- Generate sound by touching an area.
+  - Vertical axis sets the volume.
+  - Horizontal axis sets the pitch.
 
-* [Scale](https://en.wikipedia.org/wiki/Scale_(music))
+- [Scale](<https://en.wikipedia.org/wiki/Scale_(music)>)
 
-* Synth + Effects ?
+- Synth + Effects ?
 
 ## Documentations/Resources
 
