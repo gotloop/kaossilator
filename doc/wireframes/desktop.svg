@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="820" viewBox="0 0 1280 820" font-family="Helvetica, Arial, sans-serif" font-size="13">
+  <defs>
+    <pattern id="grid" width="35" height="30" patternUnits="userSpaceOnUse">
+      <path d="M35 0V30M0 30H35" stroke="#e4e4e4" stroke-width="1" fill="none"/>
+    </pattern>
+    <style>
+      .panel{fill:#fafafa;stroke:#bbb}
+      .box{fill:#fff;stroke:#999}
+      .on{fill:#333;stroke:#333}
+      .lbl{fill:#777;font-size:11px;letter-spacing:.06em}
+      .t{fill:#222}
+      .w{fill:#fff}
+      .note{fill:#c0392b;font-size:12px;font-style:italic}
+    </style>
+  </defs>
+  <rect width="1280" height="820" fill="#fff"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="1280" height="56" fill="#222"/>
+  <text x="20" y="35" class="w" font-size="20" font-weight="bold" letter-spacing=".08em">KAOSSILATOR</text>
+  <rect x="470" y="12" width="96" height="32" fill="#111" stroke="#555"/>
+  <text x="518" y="35" text-anchor="middle" fill="#ff5a3c" font-family="monospace" font-size="20">L.00</text>
+  <text x="580" y="33" class="w" font-size="15">Ambient Lead</text>
+  <rect x="1100" y="14" width="160" height="28" rx="4" fill="none" stroke="#666"/>
+  <text x="1180" y="33" text-anchor="middle" fill="#ccc">120 BPM · C4 · Ionian</text>
+
+  <!-- LEFT: Sound -->
+  <rect x="16" y="72" width="280" height="488" class="panel"/>
+  <text x="32" y="96" class="lbl">PROGRAM</text>
+  <g>
+    <rect x="32" y="106" width="248" height="28" class="box"/>
+    <rect x="32" y="106" width="35" height="28" class="on"/><text x="49" y="125" text-anchor="middle" class="w">L</text>
+    <text x="84" y="125" text-anchor="middle">a</text><text x="120" y="125" text-anchor="middle">b</text>
+    <text x="155" y="125" text-anchor="middle">c</text><text x="190" y="125" text-anchor="middle">S</text>
+    <text x="226" y="125" text-anchor="middle">d</text><text x="262" y="125" text-anchor="middle">P</text>
+    <path d="M67 106v28M102 106v28M138 106v28M173 106v28M208 106v28M244 106v28" stroke="#ccc"/>
+  </g>
+  <rect x="32" y="140" width="248" height="128" class="box"/>
+  <rect x="33" y="141" width="246" height="22" fill="#e8e8e8"/>
+  <text x="42" y="157" class="t" font-weight="bold">L.00  Ambient Lead</text>
+  <text x="42" y="180">L.01  LR 5th Lead</text>
+  <text x="42" y="202">L.02  Unison Lead</text>
+  <text x="42" y="224">L.03  Tell Min</text>
+  <text x="42" y="246">L.04  Feedback Lead</text>
+  <text x="270" y="262" text-anchor="end" class="lbl">scroll ▾</text>
+
+  <text x="32" y="294" class="lbl">SCALE</text>
+  <rect x="32" y="302" width="248" height="28" class="box"/>
+  <text x="42" y="321">ION · Ionian</text><text x="268" y="321" text-anchor="end">▾</text>
+
+  <text x="32" y="354" class="lbl">KEY</text>
+  <g font-size="11">
+    <rect x="32" y="362" width="248" height="26" class="box"/>
+    <rect x="32" y="362" width="20.6" height="26" class="on"/>
+    <text x="42" y="379" text-anchor="middle" class="w">C</text>
+    <text x="63" y="379" text-anchor="middle">C#</text><text x="83" y="379" text-anchor="middle">D</text>
+    <text x="104" y="379" text-anchor="middle">D#</text><text x="125" y="379" text-anchor="middle">E</text>
+    <text x="145" y="379" text-anchor="middle">F</text><text x="166" y="379" text-anchor="middle">F#</text>
+    <text x="187" y="379" text-anchor="middle">G</text><text x="207" y="379" text-anchor="middle">G#</text>
+    <text x="228" y="379" text-anchor="middle">A</text><text x="249" y="379" text-anchor="middle">A#</text>
+    <text x="269" y="379" text-anchor="middle">B</text>
+  </g>
+  <rect x="32" y="394" width="248" height="26" class="box"/>
+  <rect x="114.7" y="394" width="82.6" height="26" class="on"/>
+  <text x="73" y="411" text-anchor="middle">Oct 3</text>
+  <text x="156" y="411" text-anchor="middle" class="w">Oct 4</text>
+  <text x="239" y="411" text-anchor="middle">Oct 5</text>
+
+  <text x="32" y="446" class="lbl">GATE ARP</text>
+  <rect x="32" y="454" width="56" height="28" rx="14" class="on"/><circle cx="74" cy="468" r="10" fill="#fff"/>
+  <rect x="98" y="454" width="182" height="28" class="box"/>
+  <text x="108" y="473">G.28 · 2 beats</text><text x="268" y="473" text-anchor="end">▾</text>
+  <!-- pattern preview -->
+  <rect x="32" y="490" width="248" height="22" fill="#fff" stroke="#ddd"/>
+  <g fill="#333">
+    <rect x="34" y="497" width="18" height="8" rx="4"/><rect x="65" y="497" width="18" height="8" rx="4"/>
+    <rect x="127" y="497" width="18" height="8" rx="4"/><rect x="158" y="497" width="18" height="8" rx="4"/>
+    <rect x="220" y="497" width="18" height="8" rx="4"/><rect x="251" y="497" width="18" height="8" rx="4"/>
+  </g>
+  <text x="32" y="530" class="lbl">X: NOTE   ·   Y: AMBIENT DEPTH, VIBRATO</text>
+  <text x="32" y="548" class="lbl">SCALE ○   ARP ○</text>
+
+  <!-- CENTER: pad -->
+  <rect x="312" y="72" width="560" height="488" rx="18" fill="url(#grid)" stroke="#333" stroke-width="2"/>
+  <rect x="330" y="90" width="524" height="452" rx="10" fill="none" stroke="#bbb" stroke-dasharray="4 4"/>
+  <text x="592" y="86" text-anchor="middle" class="lbl">dead zone</text>
+  <!-- ghost trails of layers -->
+  <path d="M360 400 C420 380 460 330 520 340 S620 420 680 380" fill="none" stroke="#2e86de" stroke-width="3" opacity=".5"/>
+  <path d="M400 250 L470 250 L470 220 L560 220 L560 260 L640 260" fill="none" stroke="#27ae60" stroke-width="3" opacity=".5"/>
+  <!-- live touch -->
+  <line x1="312" y1="300" x2="872" y2="300" stroke="#c0392b" stroke-width="1"/>
+  <line x1="700" y1="72" x2="700" y2="560" stroke="#c0392b" stroke-width="1"/>
+  <circle cx="700" cy="300" r="16" fill="none" stroke="#c0392b" stroke-width="2"/>
+  <circle cx="700" cy="300" r="30" fill="none" stroke="#c0392b" stroke-width="1" opacity=".4"/>
+  <rect x="716" y="310" width="62" height="20" fill="#c0392b"/><text x="747" y="324" text-anchor="middle" class="w" font-size="12">G4</text>
+  <!-- scale note ticks -->
+  <g stroke="#999">
+    <line x1="330" y1="542" x2="330" y2="552"/><line x1="405" y1="542" x2="405" y2="552"/><line x1="480" y1="542" x2="480" y2="552"/>
+    <line x1="517" y1="542" x2="517" y2="552"/><line x1="592" y1="542" x2="592" y2="552"/><line x1="667" y1="542" x2="667" y2="552"/>
+    <line x1="742" y1="542" x2="742" y2="552"/><line x1="779" y1="542" x2="779" y2="552"/><line x1="854" y1="542" x2="854" y2="552"/>
+  </g>
+  <text x="592" y="580" text-anchor="middle" class="lbl">X → NOTE (scale ticks)            Y ↑ AMBIENT DEPTH</text>
+
+  <!-- RIGHT: tempo + loop -->
+  <rect x="888" y="72" width="376" height="488" class="panel"/>
+  <text x="904" y="96" class="lbl">TEMPO</text>
+  <rect x="904" y="106" width="36" height="40" class="box"/><text x="922" y="132" text-anchor="middle" font-size="18">−</text>
+  <rect x="944" y="106" width="100" height="40" class="box"/><text x="994" y="134" text-anchor="middle" font-size="22" font-weight="bold">120</text>
+  <rect x="1048" y="106" width="36" height="40" class="box"/><text x="1066" y="132" text-anchor="middle" font-size="18">+</text>
+  <rect x="1096" y="106" width="152" height="40" rx="6" class="on"/><text x="1172" y="131" text-anchor="middle" class="w" font-weight="bold">TAP</text>
+  <text x="904" y="164" class="lbl">drag the number, type it, or tap the rhythm</text>
+
+  <text x="904" y="196" class="lbl">LOOP LENGTH (BEATS)</text>
+  <g>
+    <rect x="904" y="204" width="344" height="30" class="box"/>
+    <rect x="1205" y="204" width="43" height="30" class="on"/>
+    <g text-anchor="middle" font-size="12">
+      <text x="925" y="224">1/16</text><text x="968" y="224">1/8</text><text x="1011" y="224">1/4</text><text x="1054" y="224">1/2</text>
+      <text x="1097" y="224">1</text><text x="1140" y="224">2</text><text x="1183" y="224">4</text><text x="1226" y="224" class="w">8</text>
+    </g>
+    <path d="M947 204v30M990 204v30M1033 204v30M1076 204v30M1119 204v30M1162 204v30" stroke="#ccc"/>
+  </g>
+
+  <text x="904" y="266" class="lbl">TRANSPORT</text>
+  <rect x="904" y="274" width="108" height="56" rx="6" fill="#fff" stroke="#c0392b" stroke-width="2"/>
+  <circle cx="932" cy="302" r="9" fill="#c0392b"/><text x="948" y="307" fill="#c0392b" font-weight="bold">REC</text>
+  <rect x="1020" y="274" width="108" height="56" rx="6" class="box"/>
+  <path d="M1044 290l16 12-16 12z" fill="#27ae60"/><text x="1068" y="307">Play</text>
+  <rect x="1136" y="274" width="112" height="56" rx="6" class="box"/>
+  <text x="1192" y="300" text-anchor="middle">Erase</text><text x="1192" y="317" text-anchor="middle" class="lbl">(hold)</text>
+  <text x="904" y="348" class="lbl">REC: click to start / stop  ·  key R</text>
+
+  <text x="904" y="380" class="lbl">TAKE (UNSAVED LAYERS)</text>
+  <rect x="904" y="388" width="108" height="36" rx="4" class="box"/><text x="958" y="411" text-anchor="middle">✓ Keep</text>
+  <rect x="1020" y="388" width="108" height="36" rx="4" class="box"/><text x="1074" y="411" text-anchor="middle">↶ Discard</text>
+  <rect x="1136" y="388" width="112" height="36" rx="4" class="box"/><text x="1192" y="411" text-anchor="middle">🗑 Clear all</text>
+  <text x="904" y="442" class="lbl">= device FIX / CANCEL / CLEAR</text>
+
+  <!-- loop status ring -->
+  <circle cx="960" cy="500" r="36" fill="none" stroke="#ddd" stroke-width="8"/>
+  <path d="M960 464 A36 36 0 1 1 924 500" fill="none" stroke="#27ae60" stroke-width="8"/>
+  <text x="960" y="505" text-anchor="middle" font-weight="bold">6 / 8</text>
+  <text x="1012" y="494">Playing · beat 6 of 8</text>
+  <text x="1012" y="514" class="lbl">ring = loop position, colour = status</text>
+
+  <!-- BOTTOM: layers -->
+  <rect x="16" y="596" width="1248" height="208" class="panel"/>
+  <text x="32" y="620" class="lbl">LAYERS</text>
+  <text x="1248" y="620" text-anchor="end" class="lbl">see layers.svg for details</text>
+  <!-- ruler -->
+  <g transform="translate(400,628)">
+    <rect width="848" height="18" fill="#eee"/>
+    <g fill="#777" font-size="11">
+      <text x="4" y="13">1</text><text x="110" y="13">2</text><text x="216" y="13">3</text><text x="322" y="13">4</text>
+      <text x="428" y="13">5</text><text x="534" y="13">6</text><text x="640" y="13">7</text><text x="746" y="13">8</text>
+    </g>
+  </g>
+  <line x1="960" y1="628" x2="960" y2="796" stroke="#c0392b" stroke-width="2"/>
+
+  <!-- layer rows -->
+  <g font-size="12">
+    <!-- unsaved -->
+    <rect x="32" y="652" width="1216" height="44" fill="#fff" stroke="#e67e22" stroke-dasharray="5 3"/>
+    <rect x="40" y="664" width="12" height="20" fill="#e67e22"/>
+    <text x="60" y="672" font-weight="bold">Layer 3</text><text x="60" y="688" class="lbl">UNSAVED · c.50</text>
+    <rect x="160" y="664" width="22" height="20" class="box"/><text x="171" y="678" text-anchor="middle">M</text>
+    <rect x="186" y="664" width="22" height="20" class="box"/><text x="197" y="678" text-anchor="middle">S</text>
+    <line x1="220" y1="674" x2="340" y2="674" stroke="#bbb" stroke-width="4"/><circle cx="310" cy="674" r="7" fill="#333"/>
+    <text x="370" y="679" text-anchor="middle">🗑</text>
+    <path d="M410 684 L470 684 L470 668 L560 668 M640 676 L760 676 L760 664 L830 664" fill="none" stroke="#e67e22" stroke-width="3"/>
+
+    <rect x="32" y="700" width="1216" height="44" fill="#fff" stroke="#ccc"/>
+    <rect x="40" y="712" width="12" height="20" fill="#27ae60"/>
+    <text x="60" y="720" font-weight="bold">Layer 2</text><text x="60" y="736" class="lbl">L.00 · ARP G.28</text>
+    <rect x="160" y="712" width="22" height="20" class="box"/><text x="171" y="726" text-anchor="middle">M</text>
+    <rect x="186" y="712" width="22" height="20" class="box"/><text x="197" y="726" text-anchor="middle">S</text>
+    <line x1="220" y1="722" x2="340" y2="722" stroke="#bbb" stroke-width="4"/><circle cx="280" cy="722" r="7" fill="#333"/>
+    <text x="370" y="727" text-anchor="middle">🗑</text>
+    <g fill="#27ae60"><rect x="420" y="716" width="30" height="5"/><rect x="460" y="716" width="30" height="5"/><rect x="520" y="710" width="30" height="5"/><rect x="560" y="710" width="30" height="5"/><rect x="630" y="720" width="30" height="5"/><rect x="670" y="720" width="30" height="5"/></g>
+
+    <rect x="32" y="748" width="1216" height="44" fill="#fff" stroke="#ccc"/>
+    <rect x="40" y="760" width="12" height="20" fill="#2e86de"/>
+    <text x="60" y="768" font-weight="bold">Layer 1</text><text x="60" y="784" class="lbl">b.33 · Acid Bass</text>
+    <rect x="160" y="760" width="22" height="20" class="on"/><text x="171" y="774" text-anchor="middle" class="w">M</text>
+    <rect x="186" y="760" width="22" height="20" class="box"/><text x="197" y="774" text-anchor="middle">S</text>
+    <line x1="220" y1="770" x2="340" y2="770" stroke="#bbb" stroke-width="4"/><circle cx="330" cy="770" r="7" fill="#333"/>
+    <text x="370" y="775" text-anchor="middle">🗑</text>
+    <path d="M405 784 C460 780 500 760 560 764 S700 784 780 770 S900 760 1000 776 S1160 770 1240 780" fill="none" stroke="#2e86de" stroke-width="3" opacity=".45"/>
+  </g>
+</svg>

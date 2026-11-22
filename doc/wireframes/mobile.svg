@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="860" viewBox="0 0 860 860" font-family="Helvetica, Arial, sans-serif" font-size="13">
+  <defs>
+    <style>
+      .phone{fill:#fff;stroke:#222;stroke-width:3}
+      .box{fill:#fff;stroke:#999}
+      .on{fill:#333;stroke:#333}
+      .lbl{fill:#777;font-size:11px;letter-spacing:.06em}
+      .w{fill:#fff}
+    </style>
+  </defs>
+  <rect width="860" height="860" fill="#fff"/>
+
+  <!-- PHONE 1: play -->
+  <text x="30" y="30" font-weight="bold">1 · Play screen</text>
+  <rect x="20" y="44" width="390" height="800" rx="36" class="phone"/>
+  <!-- status strip -->
+  <rect x="40" y="84" width="350" height="48" rx="8" fill="#222"/>
+  <text x="56" y="114" fill="#ff5a3c" font-family="monospace" font-size="18">L.00</text>
+  <text x="112" y="104" class="w">Ambient Lead</text>
+  <text x="112" y="122" fill="#aaa" font-size="11">120 BPM · C4 · ION · ARP G.28</text>
+  <text x="372" y="113" text-anchor="end" class="w" font-size="18">›</text>
+  <!-- pad -->
+  <rect x="40" y="144" width="350" height="350" rx="16" fill="#f6f6f6" stroke="#333" stroke-width="2"/>
+  <path d="M70 420 C130 400 170 330 230 340 S320 420 370 380" fill="none" stroke="#2e86de" stroke-width="3" opacity=".5"/>
+  <circle cx="250" cy="260" r="16" fill="none" stroke="#c0392b" stroke-width="2"/>
+  <line x1="40" y1="260" x2="390" y2="260" stroke="#c0392b"/><line x1="250" y1="144" x2="250" y2="494" stroke="#c0392b"/>
+  <!-- loop strip -->
+  <rect x="40" y="506" width="350" height="14" rx="7" fill="#eee"/>
+  <rect x="40" y="506" width="262" height="14" rx="7" fill="#27ae60"/>
+  <text x="215" y="540" text-anchor="middle" class="lbl">LOOP 6 / 8 · 3 LAYERS</text>
+  <!-- transport -->
+  <circle cx="110" cy="590" r="34" fill="#fff" stroke="#c0392b" stroke-width="3"/><circle cx="110" cy="590" r="13" fill="#c0392b"/>
+  <circle cx="215" cy="590" r="34" class="box"/><path d="M206 574l22 16-22 16z" fill="#27ae60"/>
+  <circle cx="320" cy="590" r="34" class="box"/><text x="320" y="595" text-anchor="middle" font-size="12">Erase</text>
+  <text x="110" y="642" text-anchor="middle" class="lbl">REC</text><text x="215" y="642" text-anchor="middle" class="lbl">PLAY</text><text x="320" y="642" text-anchor="middle" class="lbl">HOLD</text>
+  <!-- take bar -->
+  <rect x="40" y="660" width="350" height="44" rx="8" fill="#fdf2e9" stroke="#e67e22" stroke-dasharray="5 3"/>
+  <text x="54" y="687" fill="#e67e22">New take</text>
+  <rect x="200" y="668" width="86" height="28" rx="4" class="box"/><text x="243" y="687" text-anchor="middle">✓ Keep</text>
+  <rect x="294" y="668" width="86" height="28" rx="4" class="box"/><text x="337" y="687" text-anchor="middle">↶ Discard</text>
+  <!-- tab bar -->
+  <line x1="20" y1="740" x2="410" y2="740" stroke="#ddd"/>
+  <g text-anchor="middle" font-size="12">
+    <text x="69" y="776">🎛</text><text x="69" y="796">Sound</text>
+    <text x="166" y="776">⏱</text><text x="166" y="796">Tempo</text>
+    <text x="264" y="776">🔁</text><text x="264" y="796">Loop</text>
+    <text x="361" y="776">☰</text><text x="361" y="796">Layers</text>
+  </g>
+
+  <!-- PHONE 2: bottom sheet (Tempo + Loop) -->
+  <text x="460" y="30" font-weight="bold">2 · "Tempo" sheet open</text>
+  <rect x="450" y="44" width="390" height="800" rx="36" class="phone"/>
+  <rect x="470" y="84" width="350" height="48" rx="8" fill="#222" opacity=".4"/>
+  <rect x="470" y="144" width="350" height="250" rx="16" fill="#f6f6f6" stroke="#333" stroke-width="2" opacity=".4"/>
+  <text x="645" y="270" text-anchor="middle" class="lbl">PAD STAYS PLAYABLE ABOVE THE SHEET</text>
+  <!-- sheet -->
+  <rect x="452" y="410" width="386" height="432" rx="20" fill="#fafafa" stroke="#999"/>
+  <rect x="625" y="420" width="40" height="5" rx="3" fill="#bbb"/>
+  <text x="472" y="456" class="lbl">TEMPO</text>
+  <rect x="472" y="466" width="46" height="56" class="box"/><text x="495" y="502" text-anchor="middle" font-size="22">−</text>
+  <rect x="524" y="466" width="110" height="56" class="box"/><text x="579" y="504" text-anchor="middle" font-size="28" font-weight="bold">120</text>
+  <rect x="640" y="466" width="46" height="56" class="box"/><text x="663" y="502" text-anchor="middle" font-size="22">+</text>
+  <rect x="696" y="466" width="122" height="56" rx="8" class="on"/><text x="757" y="500" text-anchor="middle" class="w" font-weight="bold" font-size="16">TAP</text>
+
+  <text x="472" y="556" class="lbl">LOOP LENGTH (BEATS)</text>
+  <g text-anchor="middle">
+    <rect x="472" y="566" width="346" height="40" class="box"/>
+    <rect x="775" y="566" width="43" height="40" class="on"/>
+    <text x="493" y="591" font-size="12">1/16</text><text x="537" y="591" font-size="12">1/8</text><text x="580" y="591" font-size="12">1/4</text><text x="623" y="591" font-size="12">1/2</text>
+    <text x="667" y="591">1</text><text x="710" y="591">2</text><text x="753" y="591">4</text><text x="796" y="591" class="w">8</text>
+  </g>
+  <text x="472" y="632" class="lbl">GATE ARP</text>
+  <rect x="472" y="642" width="56" height="30" rx="15" class="on"/><circle cx="513" cy="657" r="11" fill="#fff"/>
+  <rect x="540" y="642" width="278" height="30" class="box"/><text x="552" y="662">G.28 · 2 beats</text><text x="806" y="662" text-anchor="end">▾</text>
+
+  <text x="472" y="704" class="lbl">TAKE</text>
+  <rect x="472" y="714" width="110" height="40" rx="4" class="box"/><text x="527" y="739" text-anchor="middle">✓ Keep</text>
+  <rect x="590" y="714" width="110" height="40" rx="4" class="box"/><text x="645" y="739" text-anchor="middle">↶ Discard</text>
+  <rect x="708" y="714" width="110" height="40" rx="4" class="box"/><text x="763" y="739" text-anchor="middle">🗑 Clear</text>
+  <text x="645" y="800" text-anchor="middle" class="lbl">SWIPE DOWN OR TAP THE PAD AREA TO CLOSE</text>
+</svg>
