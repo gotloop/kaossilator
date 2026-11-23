@@ -29,3 +29,6 @@ dist/
 web_modules/
 .cache
 .stylelintcache
+
+# Panda
+styled-system
